@@ -1,5 +1,35 @@
 import axios from 'axios';
 
+const API_BASE_URL = 'https://api.spotify.com/v1';
+
+export async function getNowPlaying(token) {
+  return axios.get(`${API_BASE_URL}/me/player/currently-playing`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
+export async function getUserProfile(token) {
+  return axios.get(`${API_BASE_URL}/me`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
+export async function getTopTracks(token) {
+  return axios.get(`${API_BASE_URL}/me/top/tracks`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
+
+/*
+import axios from 'axios';
+
 const client_id = process.env.SPOTIFY_CLIENT_ID;
 const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
 const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
@@ -55,3 +85,4 @@ export const getTopTracks = async () => {
     },
   });
 };
+*/
