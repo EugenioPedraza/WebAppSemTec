@@ -26,6 +26,22 @@ export async function getTopTracks(token) {
   });
 }
 
+export async function getSavedAlbums(token) {
+  return axios.get(`${API_BASE_URL}/me/albums`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
+export async function getTopArtists(token) {
+  return axios.get(`${API_BASE_URL}/me/top/artists`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
 
 /*
 import axios from 'axios';
