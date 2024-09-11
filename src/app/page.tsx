@@ -7,7 +7,7 @@ export default function Home() {
     <NextUIProvider>
       <div style={{ position: 'relative', minHeight: '100vh', backgroundColor: 'black', color: 'white' }}>
         <main style={{ padding: '40px' }}>
-          <div style={{ position: 'absolute', top: '20px', right: '42%', display: 'flex', alignItems: 'center' }}>
+          <div style={{ position: 'absolute', top: '20px', right: '45%', display: 'flex', alignItems: 'center' }}>
             <h1 style={{ fontSize: '2rem', fontWeight: 'bold', color: '#ffffff' }}>Factorify</h1>
           </div>
           <div style={{ position: 'absolute', top: '20px', right: '20px', display: 'flex', alignItems: 'center' }}>
